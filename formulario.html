@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário WhatsApp</title>
+</head>
+<body>
+  <form id="formulario">
+    <input type="text" name="usuario" placeholder="Usuário" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <select name="plano">
+      <option value="Básico">Básico</option>
+      <option value="Premium">Premium</option>
+    </select>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    document.getElementById("formulario").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const dados = {
+        usuario: form.usuario.value,
+        email: form.email.value,
+        plano: form.plano.value,
+      };
+
+      const response = await fetch("http://localhost:3000/enviar-whatsapp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dados),
+      });
+
+      const retorno = await response.json();
+      alert(retorno.status);
+    });
+  </script>
+</body>
+</html>
