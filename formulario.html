@@ -15,27 +15,27 @@
     <button type="submit">Enviar</button>
   </form>
 
-  <script>
-    document.getElementById("formulario").addEventListener("submit", async function (e) {
-      e.preventDefault();
+<script>
+  document.getElementById("formulario").addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-      const form = e.target;
-      const dados = {
-        usuario: form.usuario.value,
-        email: form.email.value,
-        plano: form.plano.value,
-      };
+    const form = e.target;
+    const dados = {
+      usuario: form.usuario.value,
+      email: form.email.value,
+      plano: form.plano.value,
+    };
 
-      const response = await fetch("https://whatsapp-backend-6ohy.onrender.com/enviar-whatsapp", {
-
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(dados),
-      });
-
-      const retorno = await response.json();
-      alert(retorno.status);
+    const response = await fetch("https://whatsapp-backend-6ohy.onrender.com/enviar-whatsapp", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dados),
     });
-  </script>
+
+    const retorno = await response.json();
+    alert(retorno.status);
+  });
+</script>
+
 </body>
 </html>
