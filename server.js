@@ -20,7 +20,7 @@ app.post("/enviar-whatsapp", async (req, res) => {
   const resposta = await fetch("https://graph.facebook.com/v22.0/698859893318117/messages", {
     method: "POST",
     headers: {
-      Authorization: "Bearer EAAKyGchuouoBPA6JKLxehbfLNNH8rnpGwTOYq8kVIc0cdBRMOZBhWZAN6jZBeUVZBtZCq4RZCQP1t3cy6zR4ZCT3ldFAd3biaylWWTxVJVyKGzsECVJ6rV15cLrZCYdcK0K78I8Uu7pdqLxw5b3nwVLDxwX1xG2mp8j3UE6ZCp4E0wxyYNwCAobZBZBBMh62F3mjHjWCEVgfyPxv6c8JKKQYeub5pvjtZCD4YUfq5OWZACp3DXFKF3gZDZD",
+      Authorization: "Bearer EAAKyGchuouoBPAGh5BfK9iMhVB9QVXKtzxGPVZCGCl7nS6JNBpv0a9AIJuKjCmyz3TU0WXroyE18zyycQX1xszo8iocIQkuFJz59PXw7LtE0zvRXnJvpmQ9ZAUUJAjYPRTmm57NIvXIZAQnOl88rRZBaWmRF4h0G9kVs93QIO8ZA6weCSZAWw0RRNyG3fiDGXSld31VpLJk6860j3VQucAgKWmKuirE4kdKZB2iSto7C3uGewZDZD",
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
