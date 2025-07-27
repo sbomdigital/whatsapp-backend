@@ -17,10 +17,10 @@ app.post("/enviar-whatsapp", async (req, res) => {
 
   const mensagem = `Usuário Cadastrado: ${usuario}\nEmail: ${email}\nPlano Escolhido: ${plano}`;
 
-  const resposta = await fetch("https://graph.facebook.com/v19.0/698859893318117/messages", {
+  const resposta = await fetch("https://graph.facebook.com/v22.0/698859893318117/messages", {
     method: "POST",
     headers: {
-      Authorization: "EAAKyGchuouoBPJB6bjJ3QskSJmrrMN2yddSAqcIzCaqDZANJ3tRRg9FmoiJbRSxZAVZBUKvb3Q6xbCUZCrSaEWBDi2bqZBsBi4OZBxaygX5T5BVSO1ARXLWZBwOzgBi45MNEiUtQILGDhYy7BdQXIihbwg7dpxuVIWFwZBv6EyEvCrwOByNRXveLT0a0EJ9XnRs7RR9ORbqWPi21lTC0db5TJ8J464QBxhWQnWnpDnGUFZCygIAZDZD",
+      Authorization: "Bearer EAAKyGchuouoBPJB6bjJ3QskSJmrrMN2yddSAqcIzCaqDZANJ3tRRg9FmoiJbRSxZAVZBUKvb3Q6xbCUZCrSaEWBDi2bqZBsBi4OZBxaygX5T5BVSO1ARXLWZBwOzgBi45MNEiUtQILGDhYy7BdQXIihbwg7dpxuVIWFwZBv6EyEvCrwOByNRXveLT0a0EJ9XnRs7RR9ORbqWPi21lTC0db5TJ8J464QBxhWQnWnpDnGUFZCygIAZDZD",
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
