@@ -25,7 +25,7 @@ app.post("/enviar-whatsapp", async (req, res) => {
     },
     body: JSON.stringify({
       messaging_product: "whatsapp",
-      to: "5563991325319", // ex: 5599999999999
+      to: "5563985107591", // ex: 5599999999999
       type: "text",
       text: { body: mensagem },
     }),
