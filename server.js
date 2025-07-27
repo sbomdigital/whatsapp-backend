@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 app.post("/enviar-whatsapp", async (req, res) => {
   const { plataforma, usuario, email, plano } = req.body;
 
-  const mensagem = `Plataforma: ${plataforma}\Usuário Cadastrado: ${usuario}\nEmail: ${email}\nPlano Escolhido: ${plano}`;
+  const mensagem = `Plataforma: ${plataforma}\nUsuário Cadastrado: ${usuario}\nEmail: ${email}\nPlano Escolhido: ${plano}`;
 
   const resposta = await fetch("https://graph.facebook.com/v22.0/698859893318117/messages", {
     method: "POST",
