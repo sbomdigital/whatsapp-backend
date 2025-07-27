@@ -20,12 +20,12 @@ app.post("/enviar-whatsapp", async (req, res) => {
   const resposta = await fetch("https://graph.facebook.com/v22.0/698859893318117/messages", {
     method: "POST",
     headers: {
-      Authorization: "Bearer EAAKyGchuouoBPKGSVKldamzjC3rnsXaQM9lSfn8UUYQIahBgbkZCcfytdf5SbDxsBesO9C3JiBZBVS5oyVdko5yRREVICQdp4kSbZC3kWQ4JqJFcxZAedLiaNpl7ODByY2w7sL1wXm9vylsLLkFYUONEwH4IoTbFmAAc7hHKs1ZCbt9dZCUrzILR3qjcq1dSA7fxgcNldhNBxNlJJ3ZCSLLV1pf61U76Rl6WrsfK62TfNNYgAZDZD",
+      Authorization: "Bearer EAAKgoYBEaYkBPLI8mlhuEFxxXrBVHvKLYymcaMZBa0QCQIrsZCG8GERFdzprD5J1omxDFYZCV8FREO44qyfmHSqlOj5wdN8dBTHf50N0CZBS60fbq1X8GSnRx2yhwCBZAh4PZAYhHeQPlgdgmrYmZBJciWicbPy9Q5Ch2xesDHg9IlsUe5LhAuHicjWY6eHqMLYOj4WZBH6EraluEwZBEvpJY2VlJ0V76Ml5hq6sJaXNskCphUAZDZD",
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
       messaging_product: "whatsapp",
-      to: "5563985107591", // ex: 5599999999999
+      to: "5563991325319", // ex: 5599999999999
       type: "text",
       text: { body: mensagem },
     }),
