@@ -26,7 +26,7 @@
         plano: form.plano.value,
       };
 
-      const response = await fetch("https://whatsapp-backend-6ohy.onrender.com", {
+      const response = await fetch("https://whatsapp-backend-6ohy.onrender.com/enviar-whatsapp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dados),
